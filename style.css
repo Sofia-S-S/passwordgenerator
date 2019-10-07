@@ -1,0 +1,68 @@
+.body-main {
+  background-color: greenyellow;
+}
+
+.content {
+  background-color: rebeccapurple;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.5px;
+  margin: 25px 150px 100px 150px;
+  padding: 24px;
+}
+.header-main {
+  display: flex;
+  justify-content: center;
+}
+
+#pwBox {
+  border-color: black;
+  border-style: dashed;
+  border-width: 1px;
+  padding: 20px 5% 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.htwo {
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 0.7px;
+}
+.buttons {
+  border-top-color: black;
+  border-top-style: solid;
+  border-top-width: 0.7px;
+  padding: 15px;
+}
+
+#genBtn {
+  padding: 15px;
+}
+#copyBtn {
+  padding: 15px;
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+  .content {
+    margin: 25px 100px 80px 100px;
+  }
+}
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+  .content {
+    margin: 40px 80px 40px 80px;
+  }
+}
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+  .content {
+    margin: 20px 30px 20px 30px;
+  }
+}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .content {
+    margin: 3px 5px 3px 5px;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <!--media queries-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body class="body-main">
+    <!-- header -->
+    <header class="header-main">
+      <h1>Password Generator</h1>
+    </header>
+    <!--body-->
+    <div class="content">
+      <div class="htwo">
+        <h2>Generate a Password</h2>
+      </div>
+
+      <!--box to show password-->
+      <div id="pwBox">
+        Your Secure Password
+      </div>
+
+      <!--two buttons wrap-->
+      <div class="buttons">
+        <!--button to generate-->
+        <button type="button" class="btn btn-success" id="genBtn">
+          Generate Password
+        </button>
+
+        <!--button to copy-->
+        <button type="button" class="btn" id="copyBtn">
+          Copy to Clipboard
+        </button>
+      </div>
+    </div>
+    <!--external js-->
+    <script src="./app.js"></script>
+  </body>
+</html>
