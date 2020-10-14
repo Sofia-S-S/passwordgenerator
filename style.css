@@ -1,16 +1,16 @@
-.body-main {
-  background-color: greenyellow;
+.bodyMain {
+  background-color: rgb(214, 231, 188);
 }
 
 .content {
-  background-color: rebeccapurple;
+  background-color: rgb(184, 159, 209);
   border-color: black;
   border-style: solid;
   border-width: 0.5px;
   margin: 25px 150px 100px 150px;
   padding: 24px;
 }
-.header-main {
+.headerMain {
   display: flex;
   justify-content: center;
 }
@@ -22,8 +22,9 @@
   padding: 20px 5% 100px;
   margin-bottom: 10px;
   margin-top: 10px;
+  font-size: 24px;
 }
-.htwo {
+.intro {
   border-bottom-color: black;
   border-bottom-style: solid;
   border-bottom-width: 0.7px;
@@ -35,9 +36,7 @@
   padding: 15px;
 }
 
-#genBtn {
-  padding: 15px;
-}
+#genBtn,
 #copyBtn {
   padding: 15px;
 }

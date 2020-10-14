@@ -25,7 +25,7 @@ var letters = [
   "w",
   "x",
   "y",
-  "z"
+  "z",
 ];
 var upLetters = [
   "A",
@@ -53,19 +53,23 @@ var upLetters = [
   "W",
   "X",
   "Y",
-  "Z"
+  "Z",
 ];
 var symbols = ["!", "@", "#", "$", "%", "^", "&", "*"];
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var pwLen = prompt("Length of password between 8 and 120");
+var pwLen = prompt(
+  "How long would you like your password to be? Add a number of symbols."
+);
+
 var isUpLetters = confirm(
   "Would you like to have uppercase characters in your password? "
 );
 var isSymbols = confirm(
-  "Would you like to have upecial characters in your password "
+  "Would you like to have special characters in your password "
 );
 var isNumbers = confirm("Would you like to have numbers in your password?");
 
+createPassword();
 function shuffle(array) {
   var currentIndex = array.length,
     temporaryValue,
@@ -87,19 +91,27 @@ function shuffle(array) {
 }
 
 /* defined function */
+
+function cleanPassword() {
+  window.location.reload();
+}
 function createPassword() {
   for (i = 0; i < pwLen; i++) {
     /*with UpCase*/
     if (isUpLetters === true && i === 0) {
       var randomSym = Math.floor(Math.random() * upLetters.length);
+
       /* inject a symbol in the string */
       pw.push(upLetters[randomSym]);
+      pwLen--;
     }
     /*with symbols*/
     if (isSymbols === true && i === 0) {
       var randomSym = Math.floor(Math.random() * symbols.length);
+
       /* inject a symbol in the string */
       pw.push(symbols[randomSym]);
+      pwLen--;
     }
     /*with numbers*/
     if (isNumbers === true && i === 0) {
@@ -119,42 +131,42 @@ function createPassword() {
   pwBox.innerHTML = pwShuffle.join("");
 }
 
-/* first event */
-genBtn.addEventListener("click", createPassword);
-// change this pw into a dynamic random pw
-//document.write(pw);
-// change this pw into a dynamic random pw
-document.write(pw);
+/* first event - Click new password Btn */
+genBtn.addEventListener("click", cleanPassword);
 
-/*copy button DOES NOT WORK
+// change this pw into a dynamic random pw
+// document.write(pw);
+
+/*copy button DOES NOT WORK*/
 
 function copyText() {
-  Get the text field 
-  var copyPassword = document.getElementById("pwBox");
+  // Get the text field
+  var copyPassword = document.getElementById("pwBox").ixternalHTML;
 
-  /* Select the text field 
-  copyText.select();
+  // Select the text field
 
-  /* Copy the text inside the text field 
+  copyPassword.select();
+
+  //  Copy the text inside the text field
   document.execCommand("copy");
 
-  /* Alert the copied text 
+  //  Alert the copied text
   alert("Copied password: " + copyText.value);
 }
 copyBtn.addEventListener("click", copyText);
-*/
-var $body = document.getElementsByTagName("body")[0];
-var $copyBtn = document.getElementById("copyBtn");
-var pwB = document.getElementById("pwBox").ixternalHTML;
-var copyToClipboard = function(pwBox) {
-  var $tempInput = document.createElement("INPUT");
-  $body.appendChild($tempInput);
-  $tempInput.setAttribute("value", pwBox);
-  $tempInput.select();
-  document.execCommand("copy");
-  $body.removeChild($tempInput);
-};
-$copyBtn.addEventListener("click", function(ev) {
-  copyToClipboard(pwBox);
-  alert("Password " + pwBox + "copied to clipboard");
-});
+
+// var $body = document.getElementsByTagName("body")[0];
+// var $copyBtn = document.getElementById("copyBtn");
+// var pwB = document.getElementById("pwBox").ixternalHTML;
+// var copyToClipboard = function (pwB) {
+//   var $tempInput = document.createElement("INPUT");
+//   $body.appendChild($tempInput);
+//   $tempInput.setAttribute("value", pwB);
+//   $tempInput.select();
+//   document.execCommand("copy");
+//   $body.removeChild($tempInput);
+// };
+// $copyBtn.addEventListener("click", function (ev) {
+//   copyToClipboard(pwB);
+//   alert("Password " + tempInput + " copied to clipboard");
+// });
